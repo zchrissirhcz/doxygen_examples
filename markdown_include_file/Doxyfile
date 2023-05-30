@@ -1,0 +1,15 @@
+PROJECT_NAME = "x"
+GENERATE_TREEVIEW = YES
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+
+EXTRACT_ALL = YES
+EXTRACT_STATIC = YES
+
+INPUT = hello.h \
+        D:/dbg/a/docs/root.md \
+        D:/dbg/a/docs/changelog.md
+# cpp command, the C Pre Processor, works on Linux/MacOSX, but failed on Windows
+# FILTER_PATTERNS = D:/dbg/a/docs/changelog.md="cpp -P "
+# Implement an alternative of cpp with Python wors for Windows, Linux and MacOSX
+FILTER_PATTERNS = D:/dbg/a/docs/changelog.md="python D:/dbg/a/sledcpp.py "
